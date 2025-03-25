@@ -15,6 +15,12 @@ void display(int numOfPoint, vector<vector<float>> distance) {
 int main(){
   //Số điểm
   int numOfPoint = 0;
+  cout<<"Khoang cach giua cac diem: "<<endl;
+  cout<<"+----------"<<endl;
+  cout<<"| Khoang cach den"<<endl;
+  cout<<"+--------+"<<endl;
+  cout<<"| Diem   \\"<<endl;
+  cout<<"+------------------+"<<endl;
 
 
 
