@@ -40,7 +40,7 @@ int main(){
             for (int i = 0; i < m; i++) {
                int x, y; float w; 
 			   cout<< "Nhap diem thu nhat va diem thu hai: "; cin>> x>> y;
-			    if (x < 0 || x >= numOfPoint || y < 0 || y >= numOfPoint) {
+			    if (x < 0 || x >= numOfPoint || y < 0 || y >= numOfPoint || x == y) {
                    cout << "Diem khong hop le! Nhap lai.\n";
                    i--;  // Nhập lại cạnh này
                    continue;
