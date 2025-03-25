@@ -5,12 +5,16 @@ const float INF = 1e9;
 
 int main(){
 	int Haidang;
-	cout<< endl <<"Nhap loai do thi(Do thi co huong: 1/Do thi vo huong: 2): ";
-	cin >> Haidang;
-	if (Haidang != 1 && Haidang != 2) {
-        cout << "Lua chon khong hop le! Vui long nhap 1 hoac 2.\n";
-        return 1;
-    }
+	while(true){
+		    cout<< endl <<"Nhap loai do thi(Do thi co huong: 1/Do thi vo huong: 2): ";
+	        cin >> Haidang;
+		if(Haidang == 1 || Haidang == 2){
+	        break;
+	    }
+	    else{ 
+		    continue;
+		}
+	}
     
 	//Số điểm
     int numOfPoint;
