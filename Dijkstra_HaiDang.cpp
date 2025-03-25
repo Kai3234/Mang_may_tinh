@@ -47,11 +47,15 @@ int main(){
                 }
 			    cout << "Nhap trong so canh (" << x << "," << y << "): ";
 			    cin>> w;
-			    if (w <= 0) {
-                   cout << "Trong so khong hop le! Nhap lai.\n";
-                   i--;  // Nhập lại trọng số của cạnh này 
-                   continue;
-                }
+			    if (w < 0) {
+              cout << "Trong so khong hop le! Nhap lai.\n";
+              i--;  // Nhập lại trọng số của cạnh này 
+              continue;
+          }
+
+          if (w == 0) {
+            w = INF;
+          }
 			    
 			    distance[x][y] = w; 
 			
