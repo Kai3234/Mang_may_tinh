@@ -226,6 +226,31 @@ int main() {
       cout << endl;
     } 
     else if (choice == '3') {
+      vector<int> notPointed;
+      for(int j = 0; j < numOfPoint; j++) {
+        bool pointed = false;
+        for (int i = 0; i < numOfPoint; i++) {
+          if (i == j) continue;
+          if (distance[i][j] != INF) pointed = true;
+        }
+        if (!pointed) {
+          notPointed.push_back(j);
+        }
+        }
+      cout<< endl << "=> Cac diem khong co canh: ";
+      for (int i = 0; i < notPointed.size(); i++) {
+        cout<< notPointed[i] << " ";
+      }
+      cout<< endl <<"=> Tiep tuc? (Y/N): ";
+      char answer;
+      cin >> answer;
+      if (answer == 'y' || answer == 'Y') {
+
+      }
+      else {
+        continue;
+      }
+
       cout<< endl <<"+------------------------------------------------------------------------------+"; 
       cout<< endl <<"|                           TIM DUONG DI NGAN NHAT                             |";
       cout<< endl <<"+------------------------------------------------------------------------------+"<< endl ;
