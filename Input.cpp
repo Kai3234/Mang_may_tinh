@@ -172,13 +172,15 @@ int main() {
           i--;  // Nhập lại trọng số của cạnh này 
           continue;
         }
-
+        
+        //Nếu trọng số = 0 sẽ truyền INF
         if (w == 0) {
           w = INF;
         }
         
         distance[x][y] = w; 
-
+        
+        //Nếu là đồ thị vô hướng
         if (type == '2') {
             distance[y][x] = w;
         }
