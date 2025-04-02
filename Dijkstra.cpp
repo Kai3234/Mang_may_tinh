@@ -204,6 +204,7 @@ void menuResult(int numOfPoint, const vector<float>& minDistance, const vector<b
         // Đi từ điểm bắt đầu đến một điểm chỉ định
         int end;
         end = checkInt("\n=> Nhap diem ket thuc (0-" + to_string(numOfPoint - 1) + "): ", 0, numOfPoint - 1);
+        cout<<endl;
 
         if (minDistance[end] == FLT_MAX) {
             cout << "+) Khong co duong di tu (" << start << ") den (" << end << ").\n";
@@ -327,6 +328,15 @@ int main() {
 
     // Menu chính
     while (true) {
+        if (type == '1' || type == '2') {
+            cout << endl << "+------------------------------------------------------------------------------+";
+            if (type == '1') {
+                cout << endl << "|                              DO THI CO HUONG                                 |";
+            } else {
+                cout << endl << "|                              DO THI VO HUONG                                 |";
+            }
+            cout << endl << "+------------------------------------------------------------------------------+"; 
+        }
         cout << endl << "+--------------------------------------+";
         cout << endl << "|           Chon chuc nang             |";
         cout << endl << "+--------------------------------------+";
@@ -350,11 +360,14 @@ int main() {
         } 
         else if (choice == '3') { 
             // Tìm đường đi ngắn nhất
-            cout<< endl <<"+------------------------------------------------------------------------------+"; 
-            cout<< endl <<"|                           TIM DUONG DI NGAN NHAT                             |";
-            cout<< endl <<"+------------------------------------------------------------------------------+"<< endl ;
+            
         
             while (true) {
+                cout<< endl <<"+------------------------------------------------------------------------------+"; 
+                cout<< endl <<"|                           TIM DUONG DI NGAN NHAT                             |";
+                cout<< endl <<"+------------------------------------------------------------------------------+"<< endl ;
+                
+                // Tìm đường đi ngắn nhất
                 dijkstraAlgorithm(numOfPoint, distance);
                 
                 // Tiếp tục tính toán hoặc kết thúc
